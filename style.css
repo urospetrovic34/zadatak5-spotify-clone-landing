@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700;900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.pod-logo2{
+    display:none;
+}
+
+body{
+    font-family: 'Chivo', sans-serif;
+    background-color:#121725;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.wrapper{
+    position:relative;
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-end;
+    max-width: 2560px;
+    height: 75vh;
+    width: 95%;
+    background-image: url('./assets/desktop/image-host.jpg');
+    background-blend-mode: screen;
+    background-size: 70% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.pod-logo{
+    position: absolute;
+    top:-30px;
+    left:5%;
+}
+
+.dots-logo{
+    position: absolute;
+    right:0%;
+    bottom:-50px;
+}
+
+.card{
+    background-color:#121725;
+    width:55%;
+    margin-left:5%;
+    padding-top: 90px;
+}
+
+.header{
+    font-size:52px;
+    font-weight: 300;
+    line-height:62px;
+    color:#54E6AF;
+    padding-bottom:20px;
+}
+
+.header span{
+    color:white;
+}
+
+.paragraph{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    color:#C2CBE5;
+    width: 75%;
+}
+
+.mail-button{
+    display:inline-block;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    background-color: #2C344B;
+    padding:5px;
+    border-radius: 35px;
+}
+
+.mail-button input{
+    outline:none;
+    background-color: #2C344B;
+    border:none;
+    padding-left: 35px;
+    padding-right: 55px;
+    font-family: 'Chivo', sans-serif;
+    font-size:14px;
+    font-weight: 700;
+    color:white;
+}
+
+.mail-button input::placeholder{
+    color:white;
+    opacity:0.5;
+}
+
+.mail-button button{
+    background-color: #54E6AF;
+    border:none;
+    padding:15px;
+    border-radius: 35px;
+    font-family: 'Chivo', sans-serif;
+    font-size: 15px;
+    color:#121725;
+    font-weight: 700;
+    white-space:nowrap;
+    transition: background-color 0.5s; 
+}
+
+.mail-button button:hover{
+    background-color:#B3FFE2;
+    cursor:pointer;
+    transition: background-color 0.5s; 
+}
+
+.logos{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    padding-top: 30px;
+}
+
+.logos > div > img{
+    opacity: 0;
+    width: 100%;
+}
+
+.spotify{
+    background-color: #5A668A;
+    -webkit-mask: url('./assets/desktop/spotify.svg') no-repeat center;
+    mask: url('./assets/desktop/spotify.svg') no-repeat center;
+}
+
+.apple{
+    background-color: #5A668A;
+    -webkit-mask: url('./assets/desktop/apple-podcast.svg') no-repeat center;
+    mask: url('./assets/desktop/apple-podcast.svg') no-repeat center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.google{
+    background-color: #5A668A;
+    -webkit-mask: url('./assets/desktop/google-podcasts.svg') no-repeat center;
+    mask: url('./assets/desktop/google-podcasts.svg') no-repeat center;
+    padding-right: 30px;
+}
+
+.pocket{
+    background-color: #5A668A;
+    -webkit-mask: url('./assets/desktop/pocket-casts.svg') no-repeat center;
+    mask: url('./assets/desktop/pocket-casts.svg') no-repeat center;
+    padding-right: 30px;
+}
+
+.alarm{
+    visibility:hidden;
+    color:#FB3E3E;
+    font-size:12px;
+    line-height:14.28px;
+    font-weight:400;
+    padding-left:40px;
+    transform: scaleY(0);
+    height:0;
+}
+
+.success{
+    visibility:hidden;
+    color:#54E6AF;
+    font-size:12px;
+    line-height:14.28px;
+    font-weight:400;
+    padding-left:40px;
+    transform: scaleY(0);
+    height:0;
+}
+
+.visible{
+    visibility:visible;
+    transition:transform 0.1s;
+    transform: scaleY(1);
+}
+
+@media screen and (max-width:1024px){
+    body{
+        align-items:flex-start;
+    }
+    .wrapper{
+        background-image: url('./assets/tablet/image-host.jpg');
+        width: 100%;
+    }
+
+    .card{
+        background-color:#121725;
+        padding-top: 120px;
+        width:82%;
+    }
+    .pod-logo{
+        top:40px;
+    }
+    .dots-logo{
+        left:5%;
+        bottom:-33%;
+    }
+    .header{
+        font-size:48px;
+        line-height:56px;
+    }
+    .mail-button input{
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width:480px), screen and (max-width:720px) and (orientation: landscape) {
+    .pod-logo{
+        display:none;
+    }
+    .dots-logo{
+        display:none;
+    }
+    .wrapper{
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        max-width: 2560px;
+        height: auto;
+        width: 100%;
+        background-image: url('./assets/mobile/image-host.jpg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .pod-logo2{
+        display:flex;
+    }
+    .card{
+        background-color:rgba(18,23,37,0.90);
+        width:100%;
+        max-width: 2560px;
+        margin:0 auto;
+        min-height:100vh;
+        height:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top:0;
+    }
+    .header{
+        text-align:center;
+        font-size:26px;
+        line-height:38px;
+        padding-top:40px;
+    }
+    .paragraph{
+        margin-top: 0px;
+        font-size: 15px;
+        line-height: 25px;
+        text-align:center;
+        width: 85%;
+    }
+    .spotify{
+        -webkit-mask-size: 3.5rem;
+        mask-size: 3.5rem;
+        width: 100px;
+        height:100px;
+    }
+    .apple{
+        -webkit-mask-size: 3.5rem;
+        mask-size: 3.5rem;
+        width: 100px;
+        height:100px;
+    }
+    .google{
+        -webkit-mask-size: 3.5rem;
+        mask-size: 3.5rem;
+        width: 100px;
+        height:100px;
+    }
+    .pocket{
+        -webkit-mask-size: 3.5rem;
+        mask-size: 3.5rem;
+        width: 100px;
+        height:100px;
+    }
+    .mail-button{
+        order: 1;
+        display:flex;
+        flex-direction: column;
+        margin-top:20px;
+        background-color: rgba(18,23,37,00);
+        width: 90%;
+    }
+    .mail-button input{
+        border-radius: 35px;
+        padding:15px 20px 15px 35px;
+    }
+    .mail-button button{
+        margin-top:10px;
+        padding:15px;
+    }
+    .alarm{
+        order: 1;
+        padding:0;
+    }
+    .success{
+        order: 1;
+        padding:0;
+    }
+    .logos{
+        width:90%;
+        height:60px;
+        justify-content:center;
+    }
+}
+
+@media screen and (max-width:330px){
+    .header{
+        font-size:22px;
+    }
+} 
+
+@media screen and (max-width:720px) and (orientation: landscape){
+    .landscape-padder{
+        padding-top:40px;
+    }
+    .card{
+        padding-bottom:40px;
+    }
+} 
